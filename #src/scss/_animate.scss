@@ -1,0 +1,143 @@
+.animate-link:not(.mm-listitem__text) {
+	& span {
+		position: relative;
+		&::after {
+			text-decoration: none;
+			background: -webkit-linear-gradient(0deg, #fff 0%, #fff 100%);
+			content: "";
+			position: absolute;
+			display: block;
+			height: 1px;
+			right: 0;
+			bottom: 0;
+			width: 0;
+			-webkit-transition: width 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+			transition: width 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+		}
+	}
+
+	&.--back {
+		& span {
+			&::after {
+				width: 100%;
+			}
+		}
+
+		&:hover {
+			& span {
+				&::after {
+					width: 0;
+				}
+			}
+		}
+	}
+
+	&.--black {
+		& span {
+			&::after {
+				background: -webkit-linear-gradient(0deg, #000 0%, #000 100%);
+			}
+		}
+	}
+
+	&:hover {
+		& span {
+			&::after {
+				width: 100%;
+				-webkit-transition: width 0.3s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+				transition: width 0.3s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+				left: 0;
+			}
+		}
+	}
+}
+
+@keyframes fadeInScale {
+	0% {
+		opacity: 0;
+		transform: translate(-550px, 50%) scale(0.7);
+	}
+
+	50% {
+		opacity: 1;
+		transform: translate(0, 50%) scale(0.7);
+	}
+
+	100% {
+		transform: translate(0, 50%) scale(1);
+	}
+}
+
+@media (max-width: 900px) {
+	@keyframes fadeInScale {
+		0% {
+			opacity: 0;
+			transform: translate(-550px, 0%) scale(0.7);
+		}
+
+		50% {
+			opacity: 1;
+			transform: translate(0, 0%) scale(0.7);
+		}
+
+		100% {
+			transform: translate(0, 0%) scale(1);
+		}
+	}
+}
+
+.fadeInScale {
+	&.animate {
+		animation-name: fadeInScale;
+		animation-duration: 1s;
+		animation-timing-function: ease;
+		animation-fill-mode: both;
+	}
+}
+
+// Анимация появления слева
+.fadeIn {
+	opacity: 0;
+	transform: translate(-150px, 0);
+	transition: all 0.6s ease;
+	&.animate {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+// Анимация появления справа
+.fadeInRight {
+	opacity: 0;
+	transform: translate(250px, 0);
+	transition: all 0.6s ease;
+	&.animate {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+// Анимация появления снизу
+.slideTo {
+	opacity: 0;
+	transform: translate(0, 100px);
+	transition: all 0.6s ease;
+	&.animate {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.card-achievements {
+	&:nth-child(2) {
+		transition: all 0.6s ease 0.1s;
+	}
+
+	&:nth-child(3) {
+		transition: all 0.6s ease 0.2s;
+	}
+
+	&:nth-child(4) {
+		transition: all 0.6s ease 0.3s;
+	}
+}

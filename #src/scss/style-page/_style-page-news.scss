@@ -1,0 +1,43 @@
+.page-news {
+	&__wrap {
+		padding: 20px 0 100px 0;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		&.--text-back::before {
+			left: 5%;
+		}
+	}
+
+	&__list {
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		& .card-news__image {
+			& img {
+				max-height: 450px;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 115px;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.page-news {
+		&__wrap {
+			padding: 20px 0 40px 0;
+		}
+
+		&__title {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			margin-bottom: 10px;
+		}
+	}
+}

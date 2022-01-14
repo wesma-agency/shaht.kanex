@@ -1,0 +1,58 @@
+@@include("../components/_header.html")
+
+<main class="main">
+    <section class="page-navigation">
+        <div class="container">
+            <div class="page-navigation__row">
+                <div class="page-navigation__column">
+                    <div class="page-navigation__title title-h2 --line --text-back"><span>Страницы</span></div>
+
+                    <div class="page-navigation__list">
+                        <a href="./index.html" class="page-navigation__item">Главная</a>
+                        <a href="./page-company.html" class="page-navigation__item">О компании</a>
+                        <a href="./page-project.html" class="page-navigation__item">Проекты детальная</a>
+                        <a href="./page-services.html" class="page-navigation__item">Услуги</a>
+                        <a href="./page-news.html" class="page-navigation__item">Новости</a>
+                        <a href="./page-equipment.html" class="page-navigation__item">Оборудование</a>
+                    </div>
+                </div>
+
+                <div class="page-navigation__column">
+                    <div class="page-navigation__title title-h2 --line --text-back"><span>Попапы</span></div>
+
+                    <div class="page-navigation__list">
+                        <a href="#popup-order" class="page-navigation__item js-show-popup">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .page-navigation__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .page-navigation {
+        padding: 100px 0
+    }
+
+    .page-navigation__title {
+        margin-bottom: 80px;
+    }
+
+    .page-navigation__list {
+        display: grid;
+        gap: 40px;
+    }
+
+    .page-navigation__item {
+        font-size: 36px;
+        line-height: 180%;
+        color: #AA1D26;
+    }
+</style>
+
+@@include("../components/_footer.html")
